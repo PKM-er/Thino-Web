@@ -8,11 +8,12 @@ body:
     id: steps
     attributes:
       label: 复现步骤
-      description: 请清楚描述问题
-      placeholder: 发生了什么？
-        1.
-        2.
-        3.
+      description: 请清楚描述问题（建议按「1. 2. 3.」步骤编写，方便复现）
+      placeholder: |  # 优化：用 | 保留换行格式，用户填写更清晰
+        发生了什么？
+        1. 打开XX功能/页面
+        2. 执行XX操作（如点击按钮、输入内容）
+        3. 出现XX异常现象
     validations:
       required: true
 
@@ -27,23 +28,24 @@ body:
     validations:
       required: true
 
-    - type: dropdown
-      id: browser
-      attributes:
-        label: 浏览器
-        options:
-          - Edge
-          - Chrome
-          - Safari
-          - other
-      validations:
-        required: true
+  # 修正：缩进改为 2 个空格（和上面的 device 字段对齐）
+  - type: dropdown  # 原：缩进多了 2 个空格，导致语法错误
+    id: browser
+    attributes:
+      label: 浏览器
+      options:
+        - Edge
+        - Chrome
+        - Safari
+        - other
+    validations:
+      required: true
 
   - type: textarea
     id: expected_behavior
     attributes:
       label: 期望行为
-      placeholder: 请描述你期望的结果
+      placeholder: 请描述你期望的结果（如：点击按钮后显示成功提示）
     validations:
       required: true
 
@@ -51,21 +53,22 @@ body:
     id: actual_behavior
     attributes:
       label: 实际行为
-      placeholder: 请描述实际发生的结果
+      placeholder: 请描述实际发生的结果（如：点击按钮后无响应/报错）
     validations:
       required: true
 
-  # 修正后的 markdown 字段
   - type: markdown
     id: images
     attributes:
-      # 核心修改：用 value 替代 label + description，编写 Markdown 文本
       value: |
         ### 截图/录屏
-        如果适用，请添加截图或录屏以帮助解释您的问题
+        如果适用，请添加截图或录屏以帮助解释您的问题（拖拽文件到输入框即可上传）
 
   - type: textarea
     id: other_info
     attributes:
       label: 其他信息
-      description: 请提供任何其他有助于解决问题的信息（例如：操作系统版本、Thino 版本等）
+      description: 请提供任何其他有助于解决问题的信息（例如：操作系统版本、Thino 版本、网络环境等）
+    # 可选：如果需要该字段必填，取消下面注释
+    # validations:
+    #   required: true
