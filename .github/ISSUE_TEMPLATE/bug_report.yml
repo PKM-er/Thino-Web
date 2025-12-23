@@ -20,21 +20,21 @@ body:
     id: device
     attributes:
       label: 设备
-    options:
-      - Windows
-      - Mac
+      options:
+        - Windows
+        - Mac
     validations:
       required: true
 
     - type: dropdown
       id: browser
       attributes:
-      label: 浏览器
-      options:
-        - Edge
-        - Chrome
-        - Safari
-        - other
+        label: 浏览器
+        options:
+          - Edge
+          - Chrome
+          - Safari
+          - other
       validations:
         required: true
 
