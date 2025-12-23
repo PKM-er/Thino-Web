@@ -1,0 +1,56 @@
+name: 🐞 Bug Report
+description: 报告一个可复现的问题
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请清楚描述问题
+      placeholder: 发生了什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 期望行为
+      placeholder: 请描述你期望的结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: 实际行为
+      placeholder: 请描述实际发生的结果
+    validations:
+      required: true
+
+  # 修正后的 markdown 字段
+  - type: markdown
+    id: images
+    attributes:
+      # 核心修改：用 value 替代 label + description，编写 Markdown 文本
+      value: |
+        ### 截图/录屏
+        如果适用，请添加截图或录屏以帮助解释您的问题
+
+  - type: textarea
+    id: other_info
+    attributes:
+      label: 其他信息
+      description: 请提供任何其他有助于解决问题的信息（例如：操作系统版本、Thino 版本等）
