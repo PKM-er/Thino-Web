@@ -26,14 +26,14 @@ body:
     validations:
       required: true
 
-    - type: options
+    - type: dropdown
     id: browser
     attributes:
       label: 浏览器
     options:
       - Edge
       - Chrome
-      - sarfri
+      - Safari
       - other
     validations:
       required: true
