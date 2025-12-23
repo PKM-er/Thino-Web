@@ -16,7 +16,7 @@ body:
     validations:
       required: true
 
-  - type: options
+  - type: dropdown
     id: device
     attributes:
       label: 设备
@@ -27,16 +27,16 @@ body:
       required: true
 
     - type: dropdown
-    id: browser
-    attributes:
+      id: browser
+      attributes:
       label: 浏览器
-    options:
-      - Edge
-      - Chrome
-      - Safari
-      - other
-    validations:
-      required: true
+      options:
+        - Edge
+        - Chrome
+        - Safari
+        - other
+      validations:
+        required: true
 
   - type: textarea
     id: expected_behavior
