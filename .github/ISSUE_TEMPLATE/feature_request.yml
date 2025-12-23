@@ -1,0 +1,37 @@
+name: ✨ Feature Request
+description: 提出一个新功能的建议
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+    - type: textarea
+      id: feature_description
+      attributes:
+          label: 功能描述
+          description: 请清楚描述您想要的功能
+          placeholder: 这个功能应该做什么？
+      validations:
+          required: true
+
+    - type: textarea
+      id: motivation
+      attributes:
+          label: 需求动机
+          description: 请说明为什么需要这个功能，以及它将如何帮助您或其他用户
+          placeholder: 为什么这个功能对您很重要？
+      validations:
+          required: true
+
+    - type: textarea
+      id: alternatives
+      attributes:
+          label: 替代方案
+          description: 如果有的话，请描述您目前使用的替代方案，以及它们的不足之处
+          placeholder: 您目前是如何解决这个问题的？
+      
+    - type: textarea
+      id: additional_info
+      attributes:
+          label: 其他信息
+          description: 请提供任何其他有助于理解和实现该功能的信息
+          placeholder: 任何额外的细节或上下文
