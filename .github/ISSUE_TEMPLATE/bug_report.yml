@@ -23,6 +23,7 @@ body:
       options:
         - Windows
         - Mac
+        - Linux
     validations:
       required: true
 
