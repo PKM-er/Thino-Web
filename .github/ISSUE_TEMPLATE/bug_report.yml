@@ -5,22 +5,36 @@ labels: ["bug"]
 
 body:
   - type: textarea
-    id: description
-    attributes:
-      label: 问题描述
-      description: 请清楚描述问题
-      placeholder: 发生了什么？
-    validations:
-      required: true
-
-  - type: textarea
     id: steps
     attributes:
       label: 复现步骤
-      placeholder: |
+      description: 请清楚描述问题
+      placeholder: 发生了什么？
         1.
         2.
         3.
+    validations:
+      required: true
+
+  - type: options
+    id: device
+    attributes:
+      label: 设备
+    options:
+      - Windows
+      - Mac
+    validations:
+      required: true
+
+    - type: options
+    id: browser
+    attributes:
+      label: 浏览器
+    options:
+      - Edge
+      - Chrome
+      - sarfri
+      - other
     validations:
       required: true
 
