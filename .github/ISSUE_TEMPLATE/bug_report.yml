@@ -4,6 +4,26 @@ title: "[Bug]: "
 labels: ["bug"]
 
 body:
+  - type: dropdown  
+    id: Component
+    attributes:
+      label: 问题模块
+      options:
+        - 注册/登录
+        - 首页
+        - 概览 Overview
+        - Thino 管理/ Thino
+        - 图库/ Gallery
+        - 白板/ canvas
+        - 复习/ review
+        - 文章/ writing
+        - 模板/ template
+        - AI
+        - 设置
+        - 日历
+    validations:
+      required: true
+      
   - type: textarea
     id: steps
     attributes:
