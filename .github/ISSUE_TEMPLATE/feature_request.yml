@@ -1,6 +1,6 @@
 name: ✨ Feature Request
 description: 提出一个新功能的建议
-title: "[Feature]: "
+title: "[FR]: "
 labels: ["enhancement"]
 
 body:
